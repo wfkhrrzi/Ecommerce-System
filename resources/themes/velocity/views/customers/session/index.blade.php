@@ -16,11 +16,11 @@
                             {{ __('velocity::app.customer.login-form.customer-login')}}
                         </h2>
 
-                        <a href="{{ route('customer.register.index') }}" class="btn-new-customer">
+                        <!-- <a href="{{ route('customer.register.index') }}" class="btn-new-customer">
                             <button type="button" class="theme-btn light">
                                 {{ __('velocity::app.customer.login-form.sign-up')}}
                             </button>
-                        </a>
+                        </a> -->
                     </div>
 
                     <div class="body col-12">

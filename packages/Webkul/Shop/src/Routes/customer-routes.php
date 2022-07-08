@@ -135,7 +135,7 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
 
                     Route::post('profile/destroy', [CustomerController::class, 'destroy'])->defaults('_config', [
                         'redirect' => 'customer.profile.index',
-                    ])->name('customer.profile.destroy');
+                    ])->name('customer.profile.destroy')->middleware('admin');
 
                     /**
                      * Addresses.

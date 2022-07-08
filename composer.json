@@ -9,6 +9,7 @@
     "type": "project",
     "require": {
         "php": "^8.0.2",
+        "algolia/algoliasearch-client-php": "^3.3",
         "astrotomic/laravel-translatable": "^11.0.0",
         "bagisto/legacy-api": "^1.0",
         "bagisto/rest-api": "dev-master",

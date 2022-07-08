@@ -50,7 +50,7 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
             ])->name('customer.session.index');
 
             Route::post('login', [SessionController::class, 'create'])->defaults('_config', [
-                'redirect' => 'customer.profile.index',
+                'redirect' => 'shop.home.index',
             ])->name('customer.session.create');
 
             /**

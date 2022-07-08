@@ -56,13 +56,16 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
             /**
              * Registration routes.
              */
-            Route::get('register', [RegistrationController::class, 'show'])->defaults('_config', [
-                'view' => 'shop::customers.signup.index',
-            ])->name('customer.register.index');
+            Route::middleware('admin')->group(function () {
+                Route::get('register', [RegistrationController::class, 'show'])->defaults('_config', [
+                    'view' => 'shop::customers.signup.index',
+                ])->name('customer.register.index');
 
-            Route::post('register', [RegistrationController::class, 'create'])->defaults('_config', [
-                'redirect' => 'customer.session.index',
-            ])->name('customer.register.create');
+                Route::post('register', [RegistrationController::class, 'create'])->defaults('_config', [
+                    'redirect' => 'customer.session.index',
+                ])->name('customer.register.create');
+            });
+            
 
             /**
              * Customer verification routes.

@@ -76,13 +76,13 @@
             </table>
         </div>
 
-        <button
+        <!-- <button
             type="submit"
             class="theme-btn mb20" onclick="window.showDeleteProfileModal();">
             {{ __('shop::app.customer.account.address.index.delete') }}
-        </button>
+        </button> -->
 
-        <div id="deleteProfileForm" class="d-none">
+        <!-- <div id="deleteProfileForm" class="d-none">
             <form method="POST" action="{{ route('customer.profile.destroy') }}" @submit.prevent="onSubmit">
                 @csrf
 
@@ -110,7 +110,7 @@
                     </div>
                 </modal>
             </form>
-        </div>
+        </div> -->
     </div>
 
     {!! view_render_event('bagisto.shop.customers.account.profile.view.after', ['customer' => $customer]) !!}
@@ -121,10 +121,10 @@
         /**
          * Show delete profile modal.
          */
-        function showDeleteProfileModal() {
-            document.getElementById('deleteProfileForm').classList.remove('d-none');
+        // function showDeleteProfileModal() {
+        //     document.getElementById('deleteProfileForm').classList.remove('d-none');
 
-            window.app.showModal('deleteProfile');
-        }
+        //     window.app.showModal('deleteProfile');
+        // }
     </script>
 @endpush

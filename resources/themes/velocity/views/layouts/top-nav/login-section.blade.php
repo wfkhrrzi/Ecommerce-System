@@ -33,9 +33,9 @@
                         {{ __('shop::app.header.sign-in') }}
                     </a>
 
-                    <a href="{{ route('customer.register.index') }}" class="theme-btn fs14 fw6">
+                    <!-- <a href="{{ route('customer.register.index') }}" class="theme-btn fs14 fw6">
                         {{ __('shop::app.header.sign-up') }}
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>

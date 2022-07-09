@@ -32,23 +32,40 @@
                     @csrf()
 
                     {!! view_render_event('bagisto.admin.customers.create.before') !!}
+                    
+                    <!-- company name -->
+                    <div class="control-group" :class="[errors.has('company_name') ? 'has-error' : '']">
+                        <label for="company_name" class="required">{{ __('admin::app.customers.customers.company_name') }}</label>
+                        <input type="text" class="control" id="company_name" name="company_name" v-validate="'required'" value="{{ old('company_name') }}" data-vv-as="&quot;{{ __('shop::app.customer.signup-form.companyname') }}&quot;">
+                        <span class="control-error" v-if="errors.has('company_name')">@{{ errors.first('company_name') }}</span>
+                    </div>
 
+                    <!-- company ssm -->
+                    <div class="control-group" :class="[errors.has('company_ssm') ? 'has-error' : '']">
+                        <label for="company_ssm" class="required">{{ __('admin::app.customers.customers.company_ssm') }}</label>
+                        <input type="text" class="control" id="company_ssm" name="company_ssm" v-validate="'required|digits:12'" value="{{ old('company_ssm') }}" data-vv-as="&quot;{{ __('shop::app.customer.signup-form.companyssm') }}&quot;">
+                        <span class="control-error" v-if="errors.has('company_ssm')">@{{ errors.first('company_ssm') }}</span>
+                    </div>
+                    
+                    <!-- fisrt name -->
                     <div class="control-group" :class="[errors.has('first_name') ? 'has-error' : '']">
-                        <label for="first_name" class="required">{{ __('admin::app.customers.customers.first_name') }}</label>
+                        <label for="first_name" class="required">{{ __('admin::app.customers.customers.firstname') }}</label>
                         <input type="text" class="control" id="first_name" name="first_name" v-validate="'required'" value="{{ old('first_name') }}" data-vv-as="&quot;{{ __('shop::app.customer.signup-form.firstname') }}&quot;">
                         <span class="control-error" v-if="errors.has('first_name')">@{{ errors.first('first_name') }}</span>
                     </div>
 
                     {!! view_render_event('bagisto.admin.customers.create.first_name.after') !!}
-
+                    
+                    <!-- last name -->
                     <div class="control-group" :class="[errors.has('last_name') ? 'has-error' : '']">
-                        <label for="last_name" class="required">{{ __('admin::app.customers.customers.last_name') }}</label>
+                        <label for="last_name" class="required">{{ __('admin::app.customers.customers.lastname') }}</label>
                         <input type="text" class="control" id="last_name" name="last_name" v-validate="'required'" value="{{ old('last_name') }}" data-vv-as="&quot;{{ __('shop::app.customer.signup-form.lastname') }}&quot;">
                         <span class="control-error" v-if="errors.has('last_name')">@{{ errors.first('last_name') }}</span>
                     </div>
 
                     {!! view_render_event('bagisto.admin.customers.create.last_name.after') !!}
 
+                    <!-- email -->
                     <div class="control-group" :class="[errors.has('email') ? 'has-error' : '']">
                         <label for="email" class="required">{{ __('shop::app.customer.signup-form.email') }}</label>
                         <input type="email" class="control" id="email" name="email" v-validate="'required|email'" value="{{ old('email') }}" data-vv-as="&quot;{{ __('shop::app.customer.signup-form.email') }}&quot;">
@@ -57,6 +74,7 @@
 
                     {!! view_render_event('bagisto.admin.customers.create.email.after') !!}
 
+                    <!-- gender -->
                     <div class="control-group" :class="[errors.has('gender') ? 'has-error' : '']">
                         <label for="gender" class="required">{{ __('admin::app.customers.customers.gender') }}</label>
                         <select name="gender" class="control" id="gender" v-validate="'required'" data-vv-as="&quot;{{ __('admin::app.customers.customers.gender') }}&quot;">
@@ -70,6 +88,7 @@
 
                     {!! view_render_event('bagisto.admin.customers.create.gender.after') !!}
 
+                    <!-- DOB -->
                     <div class="control-group" :class="[errors.has('date_of_birth') ? 'has-error' : '']">
                         <label for="dob">{{ __('admin::app.customers.customers.date_of_birth') }}</label>
                         <input type="date" class="control" id="dob" name="date_of_birth" v-validate="" value="{{ old('date_of_birth') }}" placeholder="{{ __('admin::app.customers.customers.date_of_birth_placeholder') }}" data-vv-as="&quot;{{ __('admin::app.customers.customers.date_of_birth') }}&quot;">
@@ -78,6 +97,7 @@
 
                     {!! view_render_event('bagisto.admin.customers.create.date_of_birth.after') !!}
 
+                    <!-- tel no -->
                     <div class="control-group" :class="[errors.has('phone') ? 'has-error' : '']">
                         <label for="phone">{{ __('admin::app.customers.customers.phone') }}</label>
                         <input type="text" class="control" id="phone" name="phone" value="{{ old('phone') }}" v-validate="'numeric'" data-vv-as="&quot;{{ __('admin::app.customers.customers.phone') }}&quot;">
@@ -86,6 +106,7 @@
 
                     {!! view_render_event('bagisto.admin.customers.create.phone.after') !!}
 
+                    <!-- Cust group -->
                     <div class="control-group">
                         <label for="customerGroup" >{{ __('admin::app.customers.customers.customer_group') }}</label>
                         <select  class="control" id="customerGroup" name="customer_group_id">

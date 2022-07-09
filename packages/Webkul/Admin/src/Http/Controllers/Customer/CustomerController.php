@@ -81,6 +81,8 @@ class CustomerController extends Controller
             'gender'        => 'required',
             'email'         => 'required|unique:customers,email',
             'date_of_birth' => 'date|before:today',
+            'company_name'    => 'string|required', // custom added attributes
+            'company_ssm'     => 'string|required|numeric|digits:12', // custom added attributes
         ]);
 
         $data = request()->all();

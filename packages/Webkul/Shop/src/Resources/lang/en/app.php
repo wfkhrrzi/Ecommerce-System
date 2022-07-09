@@ -116,8 +116,10 @@ return [
         'signup-form' => [
             'page-title'                  => 'Create New Customer Account',
             'title'                       => 'Sign Up',
-            'firstname'                   => 'First Name',
-            'lastname'                    => 'Last Name',
+            'companyname'                 => 'Company Name',
+            'companyssm'                  => 'Company SSM Number',
+            'firstname'                   => "First Name",
+            'lastname'                    => "Last Name",
             'email'                       => 'Email',
             'password'                    => 'Password',
             'confirm_pass'                => 'Confirm Password',

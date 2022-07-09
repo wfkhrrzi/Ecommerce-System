@@ -26,7 +26,7 @@
 
             <div :class="`row ${errors.has('first_name') ? 'has-error' : ''}`">
                 <label class="col-12 mandatory">
-                    {{ __('shop::app.customer.account.profile.fname') }}
+                    {{ __('shop::app.customer.account.profile.f_name') }}
                 </label>
 
                 <div class="col-12">
@@ -39,7 +39,7 @@
 
             <div :class="`row ${errors.has('last_name') ? 'has-error' : ''}`">
                 <label class="col-12 mandatory">
-                    {{ __('shop::app.customer.account.profile.lname') }}
+                    {{ __('shop::app.customer.account.profile.l_name') }}
                 </label>
 
                 <div class="col-12">

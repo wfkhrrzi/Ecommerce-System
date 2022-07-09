@@ -34,6 +34,8 @@ class Customer extends Authenticatable implements CustomerContract, JWTSubject
      * @var array
      */
     protected $fillable = [
+        'company_name',
+        'company_ssm',
         'first_name',
         'last_name',
         'gender',

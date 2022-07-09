@@ -50,7 +50,7 @@
 
             {!! view_render_event('bagisto.shop.customers.account.profile.edit.last_name.after', ['customer' => $customer]) !!}
 
-            <div :class="`row ${errors.has('gender') ? 'has-error' : ''}`">
+            <!-- <div :class="`row ${errors.has('gender') ? 'has-error' : ''}`">
                 <label class="col-12 mandatory">
                     {{ __('shop::app.customer.account.profile.gender') }}
                 </label>
@@ -101,9 +101,9 @@
                 </div>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit.gender.after', ['customer' => $customer]) !!}
+            {!! view_render_event('bagisto.shop.customers.account.profile.edit.gender.after', ['customer' => $customer]) !!} -->
 
-            <div :class="`row ${errors.has('date_of_birth') ? 'has-error' : ''}`">
+            <!-- <div :class="`row ${errors.has('date_of_birth') ? 'has-error' : ''}`">
                 <label class="col-12">
                     {{ __('shop::app.customer.account.profile.dob') }}
                 </label>
@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit.date_of_birth.after', ['customer' => $customer]) !!}
+            {!! view_render_event('bagisto.shop.customers.account.profile.edit.date_of_birth.after', ['customer' => $customer]) !!} -->
 
             <div class="row">
                 <label class="col-12 mandatory">

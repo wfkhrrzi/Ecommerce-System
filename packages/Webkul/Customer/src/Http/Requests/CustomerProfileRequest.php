@@ -29,8 +29,8 @@ class CustomerProfileRequest extends FormRequest
         return [
             'first_name'            => ['required', new AlphaNumericSpace],
             'last_name'             => ['required', new AlphaNumericSpace],
-            'gender'                => 'required|in:Other,Male,Female',
-            'date_of_birth'         => 'date|before:today',
+            // 'gender'                => 'required|in:Other,Male,Female',
+            // 'date_of_birth'         => 'date|before:today',
             'email'                 => 'email|unique:customers,email,' . $id,
             'password'              => 'confirmed|min:6|required_with:oldpassword',
             'oldpassword'           => 'required_with:password',

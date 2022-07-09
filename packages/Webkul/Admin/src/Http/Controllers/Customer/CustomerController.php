@@ -78,9 +78,9 @@ class CustomerController extends Controller
         $this->validate(request(), [
             'first_name'    => 'string|required',
             'last_name'     => 'string|required',
-            'gender'        => 'required',
+            // 'gender'        => 'required',
             'email'         => 'required|unique:customers,email',
-            'date_of_birth' => 'date|before:today',
+            // 'date_of_birth' => 'date|before:today',
             'company_name'    => 'string|required', // custom added attributes
             'company_ssm'     => 'string|required|numeric|digits:12|unique:customers,company_ssm', // custom added attributes
         ]);
@@ -136,9 +136,9 @@ class CustomerController extends Controller
         $this->validate(request(), [
             'first_name'    => 'string|required',
             'last_name'     => 'string|required',
-            'gender'        => 'required',
+            // 'gender'        => 'required',
             'email'         => 'required|unique:customers,email,' . $id,
-            'date_of_birth' => 'date|before:today',
+            // 'date_of_birth' => 'date|before:today',
             'company_name'    => 'string|required', // custom added attributes
             'company_ssm'     => 'string|required|numeric|digits:12|unique:customers,company_ssm,' . $id, // custom added attributes
         ]);

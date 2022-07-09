@@ -75,7 +75,7 @@
                     {!! view_render_event('bagisto.admin.customers.create.email.after') !!}
 
                     <!-- gender -->
-                    <div class="control-group" :class="[errors.has('gender') ? 'has-error' : '']">
+                    <!-- <div class="control-group" :class="[errors.has('gender') ? 'has-error' : '']">
                         <label for="gender" class="required">{{ __('admin::app.customers.customers.gender') }}</label>
                         <select name="gender" class="control" id="gender" v-validate="'required'" data-vv-as="&quot;{{ __('admin::app.customers.customers.gender') }}&quot;">
                             <option value="">{{ __('admin::app.customers.customers.select-gender') }}</option>
@@ -84,18 +84,18 @@
                             <option value="{{ __('admin::app.customers.customers.other') }}">{{ __('admin::app.customers.customers.other') }}</option>
                         </select>
                         <span class="control-error" v-if="errors.has('gender')">@{{ errors.first('gender') }}</span>
-                    </div>
+                    </div> -->
 
-                    {!! view_render_event('bagisto.admin.customers.create.gender.after') !!}
+                    <!-- {!! view_render_event('bagisto.admin.customers.create.gender.after') !!} -->
 
                     <!-- DOB -->
-                    <div class="control-group" :class="[errors.has('date_of_birth') ? 'has-error' : '']">
+                    <!-- <div class="control-group" :class="[errors.has('date_of_birth') ? 'has-error' : '']">
                         <label for="dob">{{ __('admin::app.customers.customers.date_of_birth') }}</label>
                         <input type="date" class="control" id="dob" name="date_of_birth" v-validate="" value="{{ old('date_of_birth') }}" placeholder="{{ __('admin::app.customers.customers.date_of_birth_placeholder') }}" data-vv-as="&quot;{{ __('admin::app.customers.customers.date_of_birth') }}&quot;">
                         <span class="control-error" v-if="errors.has('date_of_birth')">@{{ errors.first('date_of_birth') }}</span>
-                    </div>
+                    </div> -->
 
-                    {!! view_render_event('bagisto.admin.customers.create.date_of_birth.after') !!}
+                    <!-- {!! view_render_event('bagisto.admin.customers.create.date_of_birth.after') !!} -->
 
                     <!-- tel no -->
                     <div class="control-group" :class="[errors.has('phone') ? 'has-error' : '']">

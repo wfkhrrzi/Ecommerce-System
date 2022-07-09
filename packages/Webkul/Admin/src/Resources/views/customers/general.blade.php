@@ -100,7 +100,7 @@
                 {!! view_render_event('bagisto.admin.customer.edit.email.after', ['customer' => $customer]) !!}
 
                 <!-- gender -->
-                <div class="control-group" :class="[errors.has('gender') ? 'has-error' : '']">
+                <!-- <div class="control-group" :class="[errors.has('gender') ? 'has-error' : '']">
                     <label for="gender" class="required">{{ __('admin::app.customers.customers.gender') }}</label>
 
                     <select
@@ -121,7 +121,7 @@
                     <span class="control-error" v-if="errors.has('gender')">@{{ errors.first('gender') }}</span>
                 </div>
 
-                {!! view_render_event('bagisto.admin.customer.edit.gender.after', ['customer' => $customer]) !!}
+                {!! view_render_event('bagisto.admin.customer.edit.gender.after', ['customer' => $customer]) !!} -->
 
                 <!-- cust status -->
                 <div class="control-group">
@@ -162,7 +162,7 @@
                 {!! view_render_event('bagisto.admin.customer.edit.is_suspended.after', ['customer' => $customer]) !!}
 
                 <!-- DOB -->
-                <div class="control-group date" :class="[errors.has('date_of_birth') ? 'has-error' : '']">
+                <!-- <div class="control-group date" :class="[errors.has('date_of_birth') ? 'has-error' : '']">
                     <label for="dob">{{ __('admin::app.customers.customers.date_of_birth') }}</label>
 
                     <date>
@@ -178,7 +178,7 @@
                     <span class="control-error" v-if="errors.has('date_of_birth')">@{{ errors.first('date_of_birth') }}</span>
                 </div>
 
-                {!! view_render_event('bagisto.admin.customer.edit.date_of_birth.after', ['customer' => $customer]) !!}
+                {!! view_render_event('bagisto.admin.customer.edit.date_of_birth.after', ['customer' => $customer]) !!} -->
 
                 <!-- tel no -->
                 <div class="control-group" :class="[errors.has('phone') ? 'has-error' : '']">

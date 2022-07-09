@@ -176,6 +176,8 @@ return [
         'status'           => 'Status',
         'code'             => 'Code',
         'admin-name'       => 'Name',
+        'company-name'     => 'Company',
+        'company-ssm'      => 'SSM',
         'name'             => 'Name',
         'copy'             => 'Copy',
         'direction'        => 'Direction',

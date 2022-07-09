@@ -45,6 +45,8 @@ class CustomerDataGrid extends DataGrid
                 'customers.status',
                 'customers.is_suspended',
                 'customer_groups.name as group',
+                'customers.company_name',
+                'customers.company_ssm',
             )
             ->addSelect(
                 DB::raw('CONCAT(' . DB::getTablePrefix() . 'customers.first_name, " ", ' . DB::getTablePrefix() . 'customers.last_name) as full_name')
@@ -77,6 +79,24 @@ class CustomerDataGrid extends DataGrid
         ]);
 
         $this->addColumn([
+            'index'      => 'company_name',
+            'label'      => trans('admin::app.datagrid.company-name'),
+            'type'       => 'string',
+            'searchable' => true,
+            'sortable'   => true,
+            'filterable' => true,
+        ]);
+
+        $this->addColumn([
+            'index'      => 'company_ssm',
+            'label'      => trans('admin::app.datagrid.company-ssm'),
+            'type'       => 'string',
+            'searchable' => true,
+            'sortable'   => false,
+            'filterable' => true,
+        ]);
+
+        $this->addColumn([
             'index'      => 'full_name',
             'label'      => trans('admin::app.datagrid.name'),
             'type'       => 'string',
@@ -94,14 +114,14 @@ class CustomerDataGrid extends DataGrid
             'filterable' => true,
         ]);
 
-        $this->addColumn([
-            'index'      => 'group',
-            'label'      => trans('admin::app.datagrid.group'),
-            'type'       => 'string',
-            'searchable' => false,
-            'sortable'   => true,
-            'filterable' => true,
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'group',
+        //     'label'      => trans('admin::app.datagrid.group'),
+        //     'type'       => 'string',
+        //     'searchable' => false,
+        //     'sortable'   => true,
+        //     'filterable' => true,
+        // ]);
 
         $this->addColumn([
             'index'      => 'phone',
@@ -119,21 +139,21 @@ class CustomerDataGrid extends DataGrid
             },
         ]);
 
-        $this->addColumn([
-            'index'      => 'gender',
-            'label'      => trans('admin::app.datagrid.gender'),
-            'type'       => 'string',
-            'searchable' => false,
-            'sortable'   => true,
-            'filterable' => false,
-            'closure'    => function ($row) {
-                if (! $row->gender) {
-                    return '-';
-                } else {
-                    return $row->gender;
-                }
-            },
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'gender',
+        //     'label'      => trans('admin::app.datagrid.gender'),
+        //     'type'       => 'string',
+        //     'searchable' => false,
+        //     'sortable'   => true,
+        //     'filterable' => false,
+        //     'closure'    => function ($row) {
+        //         if (! $row->gender) {
+        //             return '-';
+        //         } else {
+        //             return $row->gender;
+        //         }
+        //     },
+        // ]);
 
         $this->addColumn([
             'index'      => 'status',

@@ -201,8 +201,10 @@ return [
                 'edit-fail'    => 'Error! Profile cannot be updated, please try again later.',
                 'unmatch'      => 'The old password does not match.',
 
-                'fname'     => 'First Name',
-                'lname'     => 'Last Name',
+                'f_name'    => "Agent's First Name",
+                'l_name'    => "Agent's Last Name",
+                'comp_name' => "Company's Name",
+                'comp_ssm'  => "Company's SSM",
                 'gender'    => 'Gender',
                 'other'     => 'Other',
                 'male'      => 'Male',

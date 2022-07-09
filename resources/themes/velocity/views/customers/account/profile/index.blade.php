@@ -31,10 +31,25 @@
         <div class="table">
             <table>
                 <tbody>
+                    
+                    <!-- company name -->
+                    <tr>
+                        <td>{{ __('shop::app.customer.account.profile.comp_name') }}</td>
+
+                        <td>{{ $customer->company_name }}</td>
+                    </tr>
+
+                    <!-- company ssm -->
+                    <tr>
+                        <td>{{ __('shop::app.customer.account.profile.comp_ssm') }}</td>
+
+                        <td>{{ $customer->company_ssm }}</td>
+                    </tr>
+                
                     {!! view_render_event('bagisto.shop.customers.account.profile.view.table.before', ['customer' => $customer]) !!}
 
                     <tr>
-                        <td>{{ __('shop::app.customer.account.profile.fname') }}</td>
+                        <td>{{ __('shop::app.customer.account.profile.f_name') }}</td>
 
                         <td>{{ $customer->first_name }}</td>
                     </tr>
@@ -42,33 +57,39 @@
                     {!! view_render_event('bagisto.shop.customers.account.profile.view.table.first_name.after', ['customer' => $customer]) !!}
 
                     <tr>
-                        <td>{{ __('shop::app.customer.account.profile.lname') }}</td>
+                        <td>{{ __('shop::app.customer.account.profile.l_name') }}</td>
 
                         <td>{{ $customer->last_name }}</td>
                     </tr>
 
                     {!! view_render_event('bagisto.shop.customers.account.profile.view.table.last_name.after', ['customer' => $customer]) !!}
 
-                    <tr>
+                    <!-- <tr>
                         <td>{{ __('shop::app.customer.account.profile.gender') }}</td>
 
                         <td>{{ $customer->gender ?? '-' }}</td>
                     </tr>
 
-                    {!! view_render_event('bagisto.shop.customers.account.profile.view.table.gender.after', ['customer' => $customer]) !!}
+                    {!! view_render_event('bagisto.shop.customers.account.profile.view.table.gender.after', ['customer' => $customer]) !!} -->
 
-                    <tr>
+                    <!-- <tr>
                         <td>{{ __('shop::app.customer.account.profile.dob') }}</td>
 
                         <td>{{ $customer->date_of_birth ?? '-' }}</td>
                     </tr>
 
-                    {!! view_render_event('bagisto.shop.customers.account.profile.view.table.date_of_birth.after', ['customer' => $customer]) !!}
+                    {!! view_render_event('bagisto.shop.customers.account.profile.view.table.date_of_birth.after', ['customer' => $customer]) !!} -->
 
                     <tr>
                         <td>{{ __('shop::app.customer.account.profile.email') }}</td>
 
                         <td>{{ $customer->email }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{ __('shop::app.customer.account.profile.phone') }}</td>
+
+                        <td>{{ $customer->phone }}</td>
                     </tr>
 
                     {!! view_render_event('bagisto.shop.customers.account.profile.view.table.after', ['customer' => $customer]) !!}

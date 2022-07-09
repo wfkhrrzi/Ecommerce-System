@@ -13,8 +13,41 @@
             <div slot="body">
                 {!! view_render_event('bagisto.admin.customer.edit.form.before', ['customer' => $customer]) !!}
 
+                <!-- company name -->
+                <div class="control-group" :class="[errors.has('company_name') ? 'has-error' : '']">
+                    <label for="company_name" class="required"> {{ __('admin::app.customers.customers.company_name') }}</label>
+
+                    <input
+                        type="text"
+                        class="control"
+                        id="company_name"
+                        name="company_name"
+                        value="{{old('company_name') ?:$customer->company_name}}"
+                        v-validate="'required'"
+                        data-vv-as="&quot;{{ __('shop::app.customer.signup-form.companyname') }}&quot;"/>
+
+                    <span class="control-error" v-if="errors.has('company_name')">@{{ errors.first('company_name') }}</span>
+                </div>
+
+                <!-- company ssm -->
+                <div class="control-group" :class="[errors.has('company_ssm') ? 'has-error' : '']">
+                    <label for="company_ssm" class="required"> {{ __('admin::app.customers.customers.company_ssm') }}</label>
+
+                    <input
+                        type="text"
+                        class="control"
+                        id="company_ssm"
+                        name="company_ssm"
+                        value="{{old('company_ssm') ?:$customer->company_ssm}}"
+                        v-validate="'required'"
+                        data-vv-as="&quot;{{ __('shop::app.customer.signup-form.companyssm') }}&quot;"/>
+
+                    <span class="control-error" v-if="errors.has('company_ssm')">@{{ errors.first('company_ssm') }}</span>
+                </div>
+                
+                <!-- first name -->
                 <div class="control-group" :class="[errors.has('first_name') ? 'has-error' : '']">
-                    <label for="first_name" class="required"> {{ __('admin::app.customers.customers.first_name') }}</label>
+                    <label for="first_name" class="required"> {{ __('admin::app.customers.customers.firstname') }}</label>
 
                     <input
                         type="text"
@@ -30,8 +63,9 @@
 
                 {!! view_render_event('bagisto.admin.customer.edit.first_name.after', ['customer' => $customer]) !!}
 
+                <!-- last name -->
                 <div class="control-group" :class="[errors.has('last_name') ? 'has-error' : '']">
-                    <label for="last_name" class="required"> {{ __('admin::app.customers.customers.last_name') }}</label>
+                    <label for="last_name" class="required"> {{ __('admin::app.customers.customers.lastname') }}</label>
 
                     <input
                         type="text"
@@ -47,6 +81,7 @@
 
                 {!! view_render_event('bagisto.admin.customer.edit.last_name.after', ['customer' => $customer]) !!}
 
+                <!-- email -->
                 <div class="control-group" :class="[errors.has('email') ? 'has-error' : '']">
                     <label for="email" class="required"> {{ __('admin::app.customers.customers.email') }}</label>
 
@@ -64,6 +99,7 @@
 
                 {!! view_render_event('bagisto.admin.customer.edit.email.after', ['customer' => $customer]) !!}
 
+                <!-- gender -->
                 <div class="control-group" :class="[errors.has('gender') ? 'has-error' : '']">
                     <label for="gender" class="required">{{ __('admin::app.customers.customers.gender') }}</label>
 
@@ -87,6 +123,7 @@
 
                 {!! view_render_event('bagisto.admin.customer.edit.gender.after', ['customer' => $customer]) !!}
 
+                <!-- cust status -->
                 <div class="control-group">
                     <label for="status" class="required">{{ __('admin::app.customers.customers.status') }}</label>
 
@@ -105,6 +142,7 @@
 
                 {!! view_render_event('bagisto.admin.customer.edit.status.after', ['customer' => $customer]) !!}
 
+                <!-- cust suspension -->
                 <div class="control-group">
                     <label for="isSuspended" class="required">{{ __('admin::app.customers.customers.suspend') }}</label>
 
@@ -123,6 +161,7 @@
 
                 {!! view_render_event('bagisto.admin.customer.edit.is_suspended.after', ['customer' => $customer]) !!}
 
+                <!-- DOB -->
                 <div class="control-group date" :class="[errors.has('date_of_birth') ? 'has-error' : '']">
                     <label for="dob">{{ __('admin::app.customers.customers.date_of_birth') }}</label>
 
@@ -141,6 +180,7 @@
 
                 {!! view_render_event('bagisto.admin.customer.edit.date_of_birth.after', ['customer' => $customer]) !!}
 
+                <!-- tel no -->
                 <div class="control-group" :class="[errors.has('phone') ? 'has-error' : '']">
                     <label for="phone">{{ __('admin::app.customers.customers.phone') }}</label>
 
@@ -158,6 +198,7 @@
 
                 {!! view_render_event('bagisto.admin.customer.edit.phone.after', ['customer' => $customer]) !!}
 
+                <!-- cust group -->
                 <div class="control-group">
                     <label for="customerGroup" >{{ __('admin::app.customers.customers.customer_group') }}</label>
 

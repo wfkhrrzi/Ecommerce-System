@@ -58,7 +58,7 @@ class StripeController extends Controller
         $checkout_session = \Stripe\Checkout\Session::create([
             'line_items' => [[
                 'price_data' => [
-                  'currency' => $cart->global_currency_code,
+                  'currency' => $cart->channel_currency_code,
                  'product_data' => [
                    'name' => 'Stripe Checkout Payment order id - '. $cart->id,
                   ],
@@ -67,7 +67,7 @@ class StripeController extends Controller
                 'quantity' => 1,
               ]],
             'payment_method_types' => [
-              'card',
+              'card','fpx',
             ],
             'mode' => 'payment',
             'success_url' => route('stripe.success'),
@@ -101,10 +101,9 @@ class StripeController extends Controller
 	 */
 	public function failure()
 	{
-
-        echo('jsjjs');
-        exit;
-		session()->flash('error', 'Strpe payment either cancelled or transaction failure.');
+        // echo('jsjjs');
+        // exit;
+		session()->flash('error', 'Stripe payment either cancelled or transaction failure.');
 		return redirect()->route('shop.checkout.cart.index');
 	}
 

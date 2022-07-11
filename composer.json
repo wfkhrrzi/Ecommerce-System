@@ -11,6 +11,7 @@
         "php": "^8.0.2",
         "algolia/algoliasearch-client-php": "^3.3",
         "astrotomic/laravel-translatable": "^11.0.0",
+        "bagisto/bagisto-package-generator": "dev-master",
         "bagisto/legacy-api": "^1.0",
         "bagisto/rest-api": "dev-master",
         "bagistobrasil/bagisto-product-social-share": "^0.1.2",

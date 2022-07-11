@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c401236e0e3453a6462eb31899245f2",
+    "content-hash": "5ba96a79b0d9eb008292292b09461278",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -170,6 +170,52 @@
                 }
             ],
             "time": "2022-02-05T10:42:52+00:00"
+        },
+        {
+            "name": "bagisto/bagisto-package-generator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bagisto/bagisto-package-generator.git",
+                "reference": "73173cf8a517b8722fd9aa24c61013d9a837b5e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bagisto/bagisto-package-generator/zipball/73173cf8a517b8722fd9aa24c61013d9a837b5e5",
+                "reference": "73173cf8a517b8722fd9aa24c61013d9a837b5e5",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Webkul\\PackageGenerator\\Providers\\PackageGeneratorServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webkul\\PackageGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jitendra Singh",
+                    "email": "jitendra@webkul.com"
+                }
+            ],
+            "description": "Bagisto Package Generator",
+            "support": {
+                "issues": "https://github.com/bagisto/bagisto-package-generator/issues",
+                "source": "https://github.com/bagisto/bagisto-package-generator/tree/master"
+            },
+            "time": "2021-03-22T06:30:08+00:00"
         },
         {
             "name": "bagisto/legacy-api",
@@ -12921,6 +12967,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "bagisto/bagisto-package-generator": 20,
         "bagisto/rest-api": 20,
         "flynsarmy/db-blade-compiler": 20,
         "codeception/codeception": 20,

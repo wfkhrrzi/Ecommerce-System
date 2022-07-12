@@ -71,7 +71,9 @@ class CustomerController extends Controller
         $isPasswordChanged = false;
 
         $data = $customerProfileRequest->validated();
-
+        
+        $data['email'] = $this->customerRepository->getEmail(auth()->guard('customer')->user()->id);
+        
         if (isset($data['date_of_birth']) && $data['date_of_birth'] == '') {
             unset($data['date_of_birth']);
         }

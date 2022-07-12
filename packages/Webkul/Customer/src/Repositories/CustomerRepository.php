@@ -161,4 +161,20 @@ class CustomerRepository extends Repository
             ]);
         });
     }
+
+    /**
+     * Fetch the email of the customers
+     * 
+     * @param int $customer_id
+     * 
+     * @return email
+     * 
+     */
+
+     public function getEmail($customer_id)
+     {
+        $customer_email = parent::find($customer_id,['email']);
+        
+        return $customer_email['email'];
+     }
 }

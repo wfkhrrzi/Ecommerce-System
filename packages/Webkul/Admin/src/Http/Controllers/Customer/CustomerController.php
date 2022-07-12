@@ -83,6 +83,7 @@ class CustomerController extends Controller
             // 'date_of_birth' => 'date|before:today',
             'company_name'    => 'string|required', // custom added attributes
             'company_ssm'     => 'string|required|numeric|digits:12|unique:customers,company_ssm', // custom added attributes
+            'phone'     => 'numeric|required',
         ]);
 
         $data = request()->all();
@@ -143,6 +144,7 @@ class CustomerController extends Controller
             // 'date_of_birth' => 'date|before:today',
             'company_name'    => 'string|required', // custom added attributes
             'company_ssm'     => 'string|required|numeric|digits:12|unique:customers,company_ssm,' . $id, // custom added attributes
+            'phone'     => 'numeric|required',
         ]);
 
         $data = request()->all();

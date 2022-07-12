@@ -182,7 +182,7 @@
 
                 <!-- tel no -->
                 <div class="control-group" :class="[errors.has('phone') ? 'has-error' : '']">
-                    <label for="phone">{{ __('admin::app.customers.customers.phone') }}</label>
+                    <label for="phone" class="required">{{ __('admin::app.customers.customers.phone') }}</label>
 
                     <input
                         type="text"
@@ -190,7 +190,7 @@
                         id="phone"
                         name="phone"
                         value="{{ $customer->phone }}"
-                        v-validate="'numeric'"
+                        v-validate="'required|numeric'"
                         data-vv-as="&quot;{{ __('admin::app.customers.customers.phone') }}&quot;">
 
                     <span class="control-error" v-if="errors.has('phone')">@{{ errors.first('phone') }}</span>

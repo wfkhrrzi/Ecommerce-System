@@ -26,7 +26,7 @@
                 try {
                     $subMenuCollection['profile'] = $menuItem['children']['profile'];
                     $subMenuCollection['orders'] = $menuItem['children']['orders'];
-                    $subMenuCollection['downloadables'] = $menuItem['children']['downloadables'];
+                    //$subMenuCollection['downloadables'] = $menuItem['children']['downloadables'];
 
                     if ($showWishlist) {
                         $subMenuCollection['wishlist'] = $menuItem['children']['wishlist'];

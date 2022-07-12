@@ -75,9 +75,9 @@
                                 <input type="checkbox" onclick="myFunction()" id="shoPassword" class="show-password"> {{ __('shop::app.customer.login-form.show-password') }}  
                                 <span class="control-error" v-if="errors.has('password')" v-text="errors.first('password')"></span>
 
-                                <a href="{{ route('customer.forgot-password.create') }}" class=" show-password float-right">
+                                <!-- <a href="{{ route('customer.forgot-password.create') }}" class=" show-password float-right">
                                     {{ __('shop::app.customer.login-form.forgot_pass') }}  
-                                </a>
+                                </a> -->
 
                                 <div class="mt10">
                                     @if (Cookie::has('enable-resend'))

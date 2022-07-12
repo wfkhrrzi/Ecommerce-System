@@ -107,7 +107,7 @@
                     {!! view_render_event('bagisto.admin.customers.create.phone.after') !!}
 
                     <!-- Cust group -->
-                    <div class="control-group">
+                    <!-- <div class="control-group">
                         <label for="customerGroup" >{{ __('admin::app.customers.customers.customer_group') }}</label>
                         <select  class="control" id="customerGroup" name="customer_group_id">
                         @foreach ($customerGroup as $group)
@@ -116,7 +116,7 @@
                         </select>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.customers.create.after') !!}
+                    {!! view_render_event('bagisto.admin.customers.create.after') !!} -->
                 </div>
             </div>
         </form>

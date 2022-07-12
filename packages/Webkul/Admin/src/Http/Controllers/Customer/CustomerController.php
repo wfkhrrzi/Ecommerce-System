@@ -93,6 +93,8 @@ class CustomerController extends Controller
 
         $data['is_verified'] = 1;
 
+        $data['customer_group_id'] = 2; // all customers are grouped as 'general' 
+
         $customer = $this->customerRepository->create($data);
 
         try {
@@ -148,6 +150,8 @@ class CustomerController extends Controller
         $data['status'] = ! isset($data['status']) ? 0 : 1;
 
         $data['is_suspended'] = ! isset($data['is_suspended']) ? 0 : 1;
+
+        $data['customer_group_id'] = 2; // all customers are grouped as 'general' 
 
         $this->customerRepository->update($data, $id);
 

@@ -108,7 +108,8 @@
             "Webkul\\Marketing\\": "packages/Webkul/Marketing/src",
             "Webkul\\Notification\\": "packages/Webkul/Notification/src",
             "Webkul\\Sitemap\\": "packages/Webkul/Sitemap/src",
-            "Wontonee\\Stripe\\": "packages/Wontonee/Stripe/src"
+            "Wontonee\\Stripe\\": "packages/Wontonee/Stripe/src",
+            "Webkul\\HideShopForGuest\\": "packages/Webkul/HideShopForGuest/src"
         }
     },
     "autoload-dev": {

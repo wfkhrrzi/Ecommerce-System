@@ -285,6 +285,9 @@ return [
 
         // Stripe provider
         Wontonee\Stripe\Providers\StripeServiceProvider::class,
+
+        // Hide Shop for guest
+        Webkul\HideShopForGuest\Providers\HideShopForGuestServiceProvider::class
     ],
 
     /*

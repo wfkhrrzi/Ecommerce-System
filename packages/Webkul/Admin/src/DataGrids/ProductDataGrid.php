@@ -151,14 +151,14 @@ class ProductDataGrid extends DataGrid
             'filterable' => true,
         ]);
 
-        $this->addColumn([
-            'index'      => 'product_number',
-            'label'      => trans('admin::app.datagrid.product-number'),
-            'type'       => 'string',
-            'searchable' => true,
-            'sortable'   => true,
-            'filterable' => true,
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'product_number',
+        //     'label'      => trans('admin::app.datagrid.product-number'),
+        //     'type'       => 'string',
+        //     'searchable' => true,
+        //     'sortable'   => true,
+        //     'filterable' => true,
+        // ]);
 
         $this->addColumn([
             'index'      => 'product_name',
@@ -176,43 +176,23 @@ class ProductDataGrid extends DataGrid
             },
         ]);
 
-        $this->addColumn([
-            'index'      => 'attribute_family',
-            'label'      => trans('admin::app.datagrid.attribute-family'),
-            'type'       => 'string',
-            'searchable' => true,
-            'sortable'   => true,
-            'filterable' => true,
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'attribute_family',
+        //     'label'      => trans('admin::app.datagrid.attribute-family'),
+        //     'type'       => 'string',
+        //     'searchable' => true,
+        //     'sortable'   => true,
+        //     'filterable' => true,
+        // ]);
 
-        $this->addColumn([
-            'index'      => 'product_type',
-            'label'      => trans('admin::app.datagrid.type'),
-            'type'       => 'string',
-            'sortable'   => true,
-            'searchable' => true,
-            'filterable' => true,
-        ]);
-
-        $this->addColumn([
-            'index'      => 'status',
-            'label'      => trans('admin::app.datagrid.status'),
-            'type'       => 'boolean',
-            'sortable'   => true,
-            'searchable' => false,
-            'filterable' => true,
-            'closure'    => function ($value) {
-                $html = '';
-
-                if ($value->status == 1) {
-                    $html .= '<span class="badge badge-md badge-success">' . trans('admin::app.datagrid.active') . '</span>';
-                } else {
-                    $html .= '<span class="badge badge-md badge-danger">' . trans('admin::app.datagrid.inactive') . '</span>';
-                }
-
-                return $html;
-            },
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'product_type',
+        //     'label'      => trans('admin::app.datagrid.type'),
+        //     'type'       => 'string',
+        //     'sortable'   => true,
+        //     'searchable' => true,
+        //     'filterable' => true,
+        // ]);
 
         $this->addColumn([
             'index'      => 'price',
@@ -238,6 +218,27 @@ class ProductDataGrid extends DataGrid
                 }
             },
         ]);
+
+        $this->addColumn([
+            'index'      => 'status',
+            'label'      => trans('admin::app.datagrid.status'),
+            'type'       => 'boolean',
+            'sortable'   => true,
+            'searchable' => false,
+            'filterable' => true,
+            'closure'    => function ($value) {
+                $html = '';
+
+                if ($value->status == 1) {
+                    $html .= '<span class="badge badge-md badge-success">' . trans('admin::app.datagrid.active') . '</span>';
+                } else {
+                    $html .= '<span class="badge badge-md badge-danger">' . trans('admin::app.datagrid.inactive') . '</span>';
+                }
+
+                return $html;
+            },
+        ]);
+
     }
 
     /**

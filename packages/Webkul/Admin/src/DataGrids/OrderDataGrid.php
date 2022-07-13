@@ -66,14 +66,14 @@ class OrderDataGrid extends DataGrid
             'filterable' => true,
         ]);
 
-        $this->addColumn([
-            'index'      => 'base_sub_total',
-            'label'      => trans('admin::app.datagrid.sub-total'),
-            'type'       => 'price',
-            'searchable' => false,
-            'sortable'   => true,
-            'filterable' => true,
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'base_sub_total',
+        //     'label'      => trans('admin::app.datagrid.sub-total'),
+        //     'type'       => 'price',
+        //     'searchable' => false,
+        //     'sortable'   => true,
+        //     'filterable' => true,
+        // ]);
 
         $this->addColumn([
             'index'      => 'base_grand_total',
@@ -93,14 +93,14 @@ class OrderDataGrid extends DataGrid
             'filterable' => true,
         ]);
 
-        $this->addColumn([
-            'index'      => 'channel_name',
-            'label'      => trans('admin::app.datagrid.channel-name'),
-            'type'       => 'string',
-            'sortable'   => true,
-            'searchable' => true,
-            'filterable' => true,
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'channel_name',
+        //     'label'      => trans('admin::app.datagrid.channel-name'),
+        //     'type'       => 'string',
+        //     'sortable'   => true,
+        //     'searchable' => true,
+        //     'filterable' => true,
+        // ]);
 
         $this->addColumn([
             'index'      => 'status',

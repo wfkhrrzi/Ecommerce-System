@@ -41,10 +41,10 @@
                             @onPaymentMethodSelected="paymentMethodSelected($event)">
                         </payment-section>
 
-                        <coupon-component
+                        <!-- <coupon-component
                             @onApplyCoupon="getOrderSummary"
                             @onRemoveCoupon="getOrderSummary">
-                        </coupon-component>
+                        </coupon-component> -->
                     </div>
 
                     <div

@@ -227,7 +227,7 @@
                         <div class="col-lg-4 col-md-12 offset-lg-1 row order-summary-container">
                             @include('shop::checkout.total.summary', ['cart' => $cart])
 
-                            <coupon-component></coupon-component>
+                            <!-- <coupon-component></coupon-component> -->
                         </div>
                     @else
                         <div class="fs16 col-12 empty-cart-message">

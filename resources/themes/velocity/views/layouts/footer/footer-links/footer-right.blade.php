@@ -1,4 +1,4 @@
-<!-- <div class="col-lg-4 col-md-12 col-sm-12 footer-rt-content">
+<div class="col-lg-4 col-md-12 col-sm-12 footer-rt-content">
     <div class="row">
         <div class="mb5 col-12">
             <h3>{{ __('velocity::app.home.payment-methods') }}</h3>
@@ -26,4 +26,4 @@
             @endforeach
         </div>
     </div>
-</div> -->
+</div>

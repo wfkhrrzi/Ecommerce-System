@@ -99,15 +99,15 @@
 
                     <!-- tel no -->
                     <div class="control-group" :class="[errors.has('phone') ? 'has-error' : '']">
-                        <label for="phone">{{ __('admin::app.customers.customers.phone') }}</label>
-                        <input type="text" class="control" id="phone" name="phone" value="{{ old('phone') }}" v-validate="'numeric'" data-vv-as="&quot;{{ __('admin::app.customers.customers.phone') }}&quot;">
+                        <label for="phone" class="required">{{ __('admin::app.customers.customers.phone') }}</label>
+                        <input type="text" class="control" id="phone" name="phone" value="{{ old('phone') }}" v-validate="'required|numeric'" data-vv-as="&quot;{{ __('admin::app.customers.customers.phone') }}&quot;">
                         <span class="control-error" v-if="errors.has('phone')">@{{ errors.first('phone') }}</span>
                     </div>
 
                     {!! view_render_event('bagisto.admin.customers.create.phone.after') !!}
 
                     <!-- Cust group -->
-                    <div class="control-group">
+                    <!-- <div class="control-group">
                         <label for="customerGroup" >{{ __('admin::app.customers.customers.customer_group') }}</label>
                         <select  class="control" id="customerGroup" name="customer_group_id">
                         @foreach ($customerGroup as $group)
@@ -116,7 +116,7 @@
                         </select>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.customers.create.after') !!}
+                    {!! view_render_event('bagisto.admin.customers.create.after') !!} -->
                 </div>
             </div>
         </form>

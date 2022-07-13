@@ -182,7 +182,7 @@
 
                 <!-- tel no -->
                 <div class="control-group" :class="[errors.has('phone') ? 'has-error' : '']">
-                    <label for="phone">{{ __('admin::app.customers.customers.phone') }}</label>
+                    <label for="phone" class="required">{{ __('admin::app.customers.customers.phone') }}</label>
 
                     <input
                         type="text"
@@ -190,7 +190,7 @@
                         id="phone"
                         name="phone"
                         value="{{ $customer->phone }}"
-                        v-validate="'numeric'"
+                        v-validate="'required|numeric'"
                         data-vv-as="&quot;{{ __('admin::app.customers.customers.phone') }}&quot;">
 
                     <span class="control-error" v-if="errors.has('phone')">@{{ errors.first('phone') }}</span>
@@ -199,7 +199,7 @@
                 {!! view_render_event('bagisto.admin.customer.edit.phone.after', ['customer' => $customer]) !!}
 
                 <!-- cust group -->
-                <div class="control-group">
+                <!-- <div class="control-group">
                     <label for="customerGroup" >{{ __('admin::app.customers.customers.customer_group') }}</label>
 
                     @if (! is_null($customer->customer_group_id))
@@ -217,7 +217,7 @@
                     </select>
                 </div>
 
-                {!! view_render_event('bagisto.admin.customer.edit.form.after', ['customer' => $customer]) !!}
+                {!! view_render_event('bagisto.admin.customer.edit.form.after', ['customer' => $customer]) !!} -->
             </div>
 
             <button type="submit" class="btn btn-lg btn-primary">{{ __('admin::app.customers.customers.save-btn-title') }}</button>

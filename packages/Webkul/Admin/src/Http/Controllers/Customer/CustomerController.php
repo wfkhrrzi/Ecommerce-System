@@ -83,6 +83,7 @@ class CustomerController extends Controller
             // 'date_of_birth' => 'date|before:today',
             'company_name'    => 'string|required', // custom added attributes
             'company_ssm'     => 'string|required|numeric|digits:12|unique:customers,company_ssm', // custom added attributes
+            'phone'     => 'numeric|required',
         ]);
 
         $data = request()->all();
@@ -92,6 +93,8 @@ class CustomerController extends Controller
         $data['password'] = bcrypt($password);
 
         $data['is_verified'] = 1;
+
+        $data['customer_group_id'] = 2; // all customers are grouped as 'general' 
 
         $customer = $this->customerRepository->create($data);
 
@@ -141,6 +144,7 @@ class CustomerController extends Controller
             // 'date_of_birth' => 'date|before:today',
             'company_name'    => 'string|required', // custom added attributes
             'company_ssm'     => 'string|required|numeric|digits:12|unique:customers,company_ssm,' . $id, // custom added attributes
+            'phone'     => 'numeric|required',
         ]);
 
         $data = request()->all();
@@ -148,6 +152,8 @@ class CustomerController extends Controller
         $data['status'] = ! isset($data['status']) ? 0 : 1;
 
         $data['is_suspended'] = ! isset($data['is_suspended']) ? 0 : 1;
+
+        $data['customer_group_id'] = 2; // all customers are grouped as 'general' 
 
         $this->customerRepository->update($data, $id);
 

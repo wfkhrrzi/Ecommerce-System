@@ -124,7 +124,7 @@
 
             {!! view_render_event('bagisto.shop.customers.account.profile.edit.date_of_birth.after', ['customer' => $customer]) !!} -->
 
-            <div class="row">
+            <!-- <div class="row">
                 <label class="col-12 mandatory">
                     {{ __('shop::app.customer.account.profile.email') }}
                 </label>
@@ -135,7 +135,7 @@
                 </div>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit.email.after', ['customer' => $customer]) !!}
+            {!! view_render_event('bagisto.shop.customers.account.profile.edit.email.after', ['customer' => $customer]) !!} -->
 
             <div class="row">
                 <label class="col-12">

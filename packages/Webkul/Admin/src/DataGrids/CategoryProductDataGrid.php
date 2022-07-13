@@ -126,14 +126,14 @@ class CategoryProductDataGrid extends DataGrid
             'filterable' => true,
         ]);
 
-        $this->addColumn([
-            'index'      => 'product_number',
-            'label'      => trans('admin::app.datagrid.product-number'),
-            'type'       => 'string',
-            'searchable' => true,
-            'sortable'   => true,
-            'filterable' => true,
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'product_number',
+        //     'label'      => trans('admin::app.datagrid.product-number'),
+        //     'type'       => 'string',
+        //     'searchable' => true,
+        //     'sortable'   => true,
+        //     'filterable' => true,
+        // ]);
 
         $this->addColumn([
             'index'      => 'product_name',
@@ -144,14 +144,14 @@ class CategoryProductDataGrid extends DataGrid
             'filterable' => true,
         ]);
 
-        $this->addColumn([
-            'index'      => 'product_type',
-            'label'      => trans('admin::app.datagrid.type'),
-            'type'       => 'string',
-            'sortable'   => true,
-            'searchable' => true,
-            'filterable' => true,
-        ]);
+        // $this->addColumn([
+        //     'index'      => 'product_type',
+        //     'label'      => trans('admin::app.datagrid.type'),
+        //     'type'       => 'string',
+        //     'sortable'   => true,
+        //     'searchable' => true,
+        //     'filterable' => true,
+        // ]);
 
         $this->addColumn([
             'index'      => 'status',

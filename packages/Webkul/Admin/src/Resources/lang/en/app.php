@@ -1468,6 +1468,7 @@ return [
         ],
 
         'system' => [
+            'stripe-apikey'                         => 'Api Key',
             'catalog'                               => 'Catalog',
             'homepage'                              => 'Homepage configuration',
             'allow-out-of-stock-items'              => 'Allow out of stock items',

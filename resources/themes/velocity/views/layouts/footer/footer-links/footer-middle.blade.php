@@ -1,4 +1,4 @@
-<div class="col-lg-4 col-md-12 col-sm-12 footer-ct-content">
+<div class="col-lg-6 col-md-12 col-sm-12 footer-ct-content">
 	<div class="row">
 
         @if ($velocityMetaData)
